@@ -15,7 +15,7 @@ import './App.css'
 export default function App() {
   const { user, loading: authLoading, signIn, signUp, signOut } = useAuth()
   const { todos, loading: todosLoading, addTodo, toggleComplete, deleteTodo } = useTodos(user)
-  const { profile, loading: profileLoading, updateProfile } = useProfile(user)
+  const { profile, loading: profileLoading, updateProfile, uploadAvatar, deleteAvatar } = useProfile(user)
   
   const [isEditingProfile, setIsEditingProfile] = useState(false)
 
@@ -57,6 +57,8 @@ export default function App() {
           <ProfileEdit
             profile={profile}
             onSave={updateProfile}
+            onUploadAvatar={uploadAvatar}
+            onDeleteAvatar={deleteAvatar}
             onCancel={() => setIsEditingProfile(false)}
           />
         ) : (

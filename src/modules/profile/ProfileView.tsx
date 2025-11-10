@@ -23,7 +23,13 @@ export default function ProfileView({ profile, loading, userEmail, onEdit }: Pro
       <div className="profile-card">
         <div className="profile-header">
           <div className="profile-avatar">
-            {profile?.full_name?.[0]?.toUpperCase() || userEmail[0].toUpperCase()}
+            {profile?.avatar_url ? (
+              <img src={profile.avatar_url} alt="Profile" className="avatar-image" />
+            ) : (
+              <span className="avatar-initials">
+                {profile?.full_name?.[0]?.toUpperCase() || userEmail[0].toUpperCase()}
+              </span>
+            )}
           </div>
           <h2 className="profile-title">Profile</h2>
         </div>
