@@ -6,7 +6,8 @@
 TRUNCATE TABLE 
     public.skills,
     public.contractors,
-    public.depots
+    public.depots,
+    public.drivers
 RESTART IDENTITY CASCADE;
 
 -- -------------------------------
@@ -41,3 +42,32 @@ VALUES
     ('RL Magna Park', 'RL Magna Park'),
     ('RL Manchester', 'RL Manchester'),
     ('RL Purfleet', 'RL Purfleet');
+
+
+-- -------------------------------
+-- Insert data into drivers
+-- -------------------------------
+
+
+INSERT INTO public.drivers (name)
+VALUES
+    ('Kevin Morrissey'),
+    ('Leonard McLoughlin'),
+    ('Michael Wilson'),
+    ('John Connell'),
+    ('Ian Cogan'),
+    ('Dave Kenny'),
+    ('Damien Wall'),
+    ('John Barrett'),
+    ('Patrick Murphy'),
+    ('Paul Harrington'),
+    ('Noel O''Burke'),
+    ('Kevin Byrne'),
+    ('Dominic Dent'),
+    ('Lee Brady'),
+    ('Zanis Kreilis'),
+    ('Michael Heffernan'),
+    ('Dariusz Brykala'),
+    ('Philip Cantwell'),
+    ('Maris Vancans'),
+    ('Mariusz Sacrowski');
