@@ -81,10 +81,6 @@ npm run seed
 # Create new migration
 npx supabase migration new create_new_table
 
-# Test locally
-npx supabase start
-npx supabase db reset
-
 # Push changes to remote
 npx supabase db push
 
